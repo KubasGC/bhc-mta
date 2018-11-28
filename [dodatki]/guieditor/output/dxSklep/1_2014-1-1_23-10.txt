@@ -1,0 +1,41 @@
+--[[-------------------------------------------------
+Notes:
+
+> This code is using a custom font. This will only work as long as the location it is from always exists, and the resource it is part of is running.
+    To ensure it does not break, it is highly encouraged to move custom fonts into your local resource and reference them there.
+--]]-------------------------------------------------
+
+
+addEventHandler("onClientResourceStart", resourceRoot,
+    function()    
+    end
+)
+
+local dxfont_0 = dxCreateFont(":bhc_vehicles/font.ttf")
+local dxfont_1 = dxCreateFont(":bhc_vehicles/font.ttf")
+local dxfont_2 = dxCreateFont(":bhc_vehicles/font.ttf")
+
+addEventHandler("onClientRender", root,
+    function()
+        dxDrawRectangle(370, 186, 627, 555, tocolor(0, 0, 0, 200), false)
+        dxDrawText("SKLEP", 370, 186, 998, 256, tocolor(255, 255, 255, 255), 1.00, "bankgothic", "center", "center", false, false, true, false, false)
+        dxDrawRectangle(871, 186, 126, 44, tocolor(14, 3, 239, 150), false)
+        dxDrawText("Zamknij", 870, 186, 997, 230, tocolor(255, 255, 255, 255), 1.00, dxfont_0, "center", "center", false, false, false, true, false)
+        dxDrawText("Broń palna", 426, 301, 529, 323, tocolor(255, 255, 255, 255), 1.00, dxfont_1, "center", "center", false, false, false, false, false)
+        dxDrawText("Broń biała", 559, 301, 662, 323, tocolor(255, 255, 255, 255), 1.00, userdata: 000225D9, "center", "center", false, false, false, false, false)
+        dxDrawText("Amunicja", 702, 301, 805, 323, tocolor(255, 255, 255, 255), 1.00, userdata: 000225D9, "center", "center", false, false, false, false, false)
+        dxDrawText("Wyposażenie", 844, 300, 947, 322, tocolor(255, 255, 255, 255), 1.00, userdata: 000225D9, "center", "center", false, false, false, false, false)
+        dxDrawRectangle(426, 363, 521, 283, tocolor(0, 0, 0, 200), false)
+        dxDrawText("NAZWA", 426, 363, 762, 392, tocolor(255, 255, 255, 255), 1.00, dxfont_2, "center", "center", false, false, false, false, false)
+        dxDrawText("WARTOŚĆ", 762, 364, 843, 392, tocolor(255, 255, 255, 255), 1.00, userdata: 00022638, "center", "center", false, false, false, false, false)
+        dxDrawText("CENA", 843, 364, 947, 392, tocolor(255, 255, 255, 255), 1.00, userdata: 00022638, "center", "center", false, false, false, false, false)
+        dxDrawText("Nazwa 1", 426, 392, 762, 411, tocolor(255, 255, 255, 255), 1.00, userdata: 00022638, "center", "center", false, false, false, false, false)
+        dxDrawText("Wartość 1", 762, 393, 843, 411, tocolor(255, 255, 255, 255), 1.00, userdata: 00022638, "center", "center", false, false, false, false, false)
+        dxDrawText("Cena 1", 843, 393, 947, 411, tocolor(255, 255, 255, 255), 1.00, userdata: 00022638, "center", "center", false, false, false, false, false)
+        dxDrawText("Nazwa 2", 426, 411, 762, 430, tocolor(255, 255, 255, 255), 1.00, userdata: 00022638, "center", "center", false, false, false, false, false)
+        dxDrawText("Wartość 2", 762, 411, 843, 429, tocolor(255, 255, 255, 255), 1.00, userdata: 00022638, "center", "center", false, false, false, false, false)
+        dxDrawText("Cena 2", 843, 411, 947, 429, tocolor(255, 255, 255, 255), 1.00, userdata: 00022638, "center", "center", false, false, false, false, false)
+        dxDrawRectangle(620, 663, 126, 44, tocolor(14, 3, 239, 150), false)
+        dxDrawText("Zakup", 620, 663, 746, 707, tocolor(255, 255, 255, 255), 1.00, userdata: 0002259A, "center", "center", false, false, false, true, false)
+    end
+)

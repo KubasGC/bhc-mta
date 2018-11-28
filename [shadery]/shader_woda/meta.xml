@@ -1,0 +1,9 @@
+<meta>
+    <script src="c_water.lua" type="client" />
+    <script src="c_sunInfluence.lua" type="client" />
+    <script src="c_switch.lua" type="client" />
+    <file src="fx/water.fx" type="client" />
+    <file src="fx/mta-helper.fx" type="client" />
+    <file src="images/wavemap.png" type="client" />
+    <file src="images/cube_env256.dds" type="client" />
+</meta>

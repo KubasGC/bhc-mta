@@ -1,0 +1,15 @@
+<meta>
+    <file src="logo.png" />
+    <file src="info.png" />
+    <file src="line.png" />
+    <file src="sound.mp3" />
+    <file src="font.ttf" />
+    <file src="zsrr.png" />
+    <file src="usa.png" />
+    <file src="newLogo.png" />
+
+    <include resource="DB" />
+    <include resource="bhc_noti" />
+    <script src="server.lua" type="server" />
+    <script src="client.lua" type="client" />
+</meta>

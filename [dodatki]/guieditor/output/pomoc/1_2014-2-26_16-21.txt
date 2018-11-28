@@ -1,0 +1,31 @@
+
+GUIEditor = {
+    tab = {},
+    window = {},
+    tabpanel = {},
+    memo = {}
+}
+addEventHandler("onClientResourceStart", resourceRoot,
+    function()
+        GUIEditor.window[1] = guiCreateWindow(0.25, 0.19, 0.49, 0.54, "Pomoc", true)
+        guiWindowSetMovable(GUIEditor.window[1], false)
+        guiWindowSetSizable(GUIEditor.window[1], false)
+
+        GUIEditor.tabpanel[1] = guiCreateTabPanel(0.01, 0.06, 0.97, 0.92, true, GUIEditor.window[1])
+
+        GUIEditor.tab[1] = guiCreateTab("Ogólne", GUIEditor.tabpanel[1])
+
+        GUIEditor.memo[1] = guiCreateMemo(-0.01, 0.00, 1.01, 1.00, "Ogólna pomoc i chuj", true, GUIEditor.tab[1])
+        guiMemoSetReadOnly(GUIEditor.memo[1], true)
+
+        GUIEditor.tab[2] = guiCreateTab("Komendy", GUIEditor.tabpanel[1])
+
+        GUIEditor.memo[2] = guiCreateMemo(-0.01, 0.00, 1.01, 1.00, "A tutaj zajebiste komendy ejjejeejejjejej", true, GUIEditor.tab[2])
+        guiMemoSetReadOnly(GUIEditor.memo[2], true)
+
+        GUIEditor.tab[3] = guiCreateTab("Korzystanie z artylerii", GUIEditor.tabpanel[1])
+
+        GUIEditor.memo[3] = guiCreateMemo(-0.01, 0.00, 1.01, 1.00, "Arta ttdsatdsatdsa", true, GUIEditor.tab[3])
+        guiMemoSetReadOnly(GUIEditor.memo[3], true)    
+    end
+)

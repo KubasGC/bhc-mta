@@ -1,0 +1,24 @@
+<meta>
+	<include resource="DB" />
+	<file src="headshot.mp3" />
+	<file src="cel.png" />
+	<file src="test5.png" />
+	<file src="kill.png" />
+	<file src="ob.png" />
+	<file src="font.ttf" />
+	<file src="files/message.mp3" />
+
+	<file src="images/hp.png" />
+	<file src="images/armour.png" />
+
+
+	<script src="spawn.lua" type="server" />
+	<script src="core.lua" type="server" />
+	<export function="savePlayer" type="server" />
+	<script src="commands.lua" type="server" />
+	<script src="id_graczy.lua" type="server" />
+	<script src="timers.lua" type="server" />
+	<script src="settings.lua" type="server" />
+
+	<script src="c_core.lua" type="client" />
+</meta>

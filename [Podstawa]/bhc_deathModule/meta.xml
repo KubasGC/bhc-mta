@@ -1,0 +1,9 @@
+<meta>
+	<file src="images/murder.png" />
+	<file src="images/kill.png" />
+	<file src="font.ttf" />
+
+	<script src="server.lua" />
+	<script src="killerMessage.lua" type="client" />
+	<script src="victimMessage.lua" type="client" />
+</meta>

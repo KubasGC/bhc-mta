@@ -1,0 +1,6 @@
+<meta>
+    <script src="server.lua" type="server"/>
+    <export function="zapytanie" type="server" />
+    <export function="fetchArray" type="server" />
+    <export function="getArray" type="server" />
+</meta>

@@ -1,0 +1,24 @@
+<meta>
+	<file src="blackhawk/blackhawk.txd" />
+	<file src="blackhawk/blackhawk.dff" />
+
+	<file src="littlebird/littlebird.txd" />
+	<file src="littlebird/littlebird.dff" />
+
+	<file src="artillery/artillery.txd" />
+	<file src="artillery/artillery.dff" />
+
+	<file src="v22/v22.txd" />
+	<file src="v22/v22.dff" />
+
+	<file src="tupolew/tupolew.txd" />
+	<file src="tupolew/tupolew.dff" />
+
+	<file src="chinook/chinook.txd" />
+	<file src="chinook/chinook.dff" />
+
+	<file src="uaz/uaz.txd" />
+	<file src="uaz/uaz.dff" />
+
+	<script src="podmianka.lua" type="client" />
+</meta>

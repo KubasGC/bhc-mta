@@ -1,0 +1,196 @@
+addEventHandler("onPlayerJoin", getRootElement(), function()
+	setPlayerNametagShowing(source, false)
+end)
+
+addEventHandler("onResourceStart", getResourceRootElement(getThisResource()), function()
+	local players = getElementsByType("player")
+	for k, v in ipairs(players) do
+		fadeCamera(v, false)
+	end
+end)
+
+function table.random ( theTable )
+	return theTable[math.random ( #theTable )]
+end
+
+addEvent("checkAccount", true)
+addEventHandler("checkAccount", getRootElement(), function(user, pass)
+	local query = exports.DB:fetchArray("SELECT `member_id`, `members_display_name`, `member_group_id`, `BHC` FROM `forum_members` WHERE `members_pass_hash`=MD5(CONCAT(MD5(`members_pass_salt`), '', MD5('"..pass.."'))) AND `name`='"..user.."'")
+	if(query ~= nil) then
+		setElementData(source, "global:id", query.member_id)
+		setElementData(source, "global:name", query.members_display_name)
+		setElementData(source, "global:mgi", query.member_group_id)
+		setElementData(source, "admin", query.BHC)
+		triggerClientEvent(source, "hideGUI", root)
+		local chars = {}
+		local query = exports.DB:zapytanie("SELECT `id` FROM `bhc_players` WHERE `guid` = '"..getElementData(source, "global:id").."'")
+		if(query > 0) then
+			local query = exports.DB:getArray("SELECT * FROM `bhc_players` WHERE `guid` = '"..getElementData(source, "global:id").."'")
+			local i = 0
+			for k, v in ipairs(query) do
+				i = i + 1
+				chars[i] = {}
+				chars[i].id = v.id
+				chars[i].username = v.username
+				chars[i].nation = tonumber(v.nation)
+				chars[i].Online = tonumber(v.CzasOnline)
+				chars[i].lastlog = tonumber(v.LastLog)
+
+				chars[i].block = tonumber(v.Block)
+
+				chars[i].dmg = tonumber(v.dmg)
+				chars[i].dmg_head = tonumber(v.dmg_head)
+				chars[i].dmg_torso = tonumber(v.dmg_torso)
+				chars[i].dmg_larm = tonumber(v.dmg_larm)
+				chars[i].dmg_rarm = tonumber(v.dmg_rarm)
+				chars[i].dmg_lleg = tonumber(v.dmg_lleg)
+				chars[i].dmg_rleg = tonumber(v.dmg_rleg)
+				chars[i].dmg_ass = tonumber(v.dmg_ass)
+			end
+			triggerClientEvent(source, "showChars", source, chars)
+		else
+			kickPlayer(source, "Nie posiadasz zadnej postaci, na ktorej moglbys zalogowac sie do gry! Stworz ja na naszym forum brotherhoodcombat.pl")
+		end
+	else
+		exports.bhc_noti:showBox(source, "Podano błędną nazwę użytkownika, lub hasło.")
+	end
+end)
+
+
+function onPlayerSelectChar(id)
+
+		local x, y, z
+		local skin
+		local char = exports.DB:fetchArray("SELECT * FROM `bhc_players` WHERE `id` = '"..id.."'")
+		if(char.nation == 0) then
+			skin = 61
+			local elem = getElementByID("ROSs")
+			local table = getElementData(elem, "player")
+			local max = #table
+			local cyfra = math.random(max)
+
+			local i = 0
+			for k, v in ipairs(table) do
+				if(k == cyfra) then
+					x = v.x
+					y = v.y
+					z = v.z
+				end
+			end
+
+		else
+			skin = 285
+			local elem = getElementByID("USAs")
+			local table = getElementData(elem, "player")
+			local max = #table
+			local cyfra = math.random(max)
+			for k, v in ipairs(table) do
+				if(k == cyfra) then
+					x = v.x
+					y = v.y
+					z = v.z
+				end
+			end
+		end
+		local name = char.username
+		local nazwanacji
+		if(char.nation == 0) then
+			nazwanacji = "ZSRR"
+		elseif(char.nation == 1) then
+			nazwanacji = "USA"
+		end
+		
+		setElementData(source, "charid", tonumber(char.id))
+		setElementData(source, "nationName", nazwanacji)
+		setElementData(source, "nationGeneral", tonumber(char.nationGeneral))
+		setElementData(source, "punkty", tonumber(char.score))
+		setElementData(source, "skin", skin)
+		setElementData(source, "nation", tonumber(char.nation))
+		setElementData(source, "iloscUzywanychBroni", 0)
+		setElementData(source, "onlineTime", tonumber(char.CzasOnline))
+
+		setElementData(source, "dmg_head", tonumber(char.dmg_head))
+		setElementData(source, "dmg_torso", tonumber(char.dmg_torso))
+		setElementData(source, "dmg_larm", tonumber(char.dmg_larm))
+		setElementData(source, "dmg_rarm", tonumber(char.dmg_rarm))
+		setElementData(source, "dmg_lleg", tonumber(char.dmg_lleg))
+		setElementData(source, "dmg_rleg", tonumber(char.dmg_rleg))
+		setElementData(source, "dmg_ass", tonumber(char.dmg_ass))
+		setElementData(source, "dmg", tonumber(char.dmg))
+
+		setPedStat(source, 69, 41)
+		setPedStat(source, 70, 501)
+		setPedStat(source, 71, 201)
+		setPedStat(source, 72, 201)
+		setPedStat(source, 73, 201)
+		setPedStat(source, 74, 201)
+		setPedStat(source, 75, 51)
+		setPedStat(source, 76, 251)
+		setPedStat(source, 77, 201)
+		setPedStat(source, 78, 201)
+		setPedStat(source, 79, 301)
+
+		setPlayerName(source, name)
+		name = name:gsub("_", " ")
+		setElementData(source, "loggedIn", 1)
+		exports.bhc_core:savePlayer(source, 2)
+
+		fadeCamera(source, false)
+		bindKey(source, "k", "down", "chatbox", "Radio")
+
+		setTimer(function(source)
+			exports.bhc_divisions:getPlayerDivision(source)
+			showPlayerHudComponent(source, "radar", true)
+			showChat(source, true)
+			setElementData(source, "playerSpawned", true)
+			spawnPlayer(source, x, y, z, 0, skin)
+			setCameraTarget(source, source)
+			outputChatBox("Witaj, "..getElementData(source, "global:name").."! Zalogowałeś się na postać "..name..". (GID: "..getElementData(source, "global:id").." UID: "..getElementData(source, "charid").." ID: "..getElementData(source, "id")..")", source)
+			fadeCamera(source, true)
+			setElementData(source, "showHud", true)
+
+			if(getElementData(source, "nationGeneral") ~= -1) then
+				outputChatBox("", source)
+				outputChatBox("", source)
+				if(getElementData(source, "nationGeneral") == 0) then
+					outputChatBox("Posiadasz uprawnienia globalnego generała nacji ZSRR", source, 255, 0 ,0)
+				elseif(getElementData(source, "nationGeneral") == 1) then
+					outputChatBox("Posiadasz uprawnienia globalnego generała nacji USA", source, 255, 0 ,0)
+				end
+			end
+
+			end, 1500, 1, source)
+
+
+		--[[ tworzenie markerów na mapie]]--
+		if(char.nation == 0) then
+			local blip = createBlipAttachedTo(source, 0, 2, 255, 0, 0, 255, 0, 500)
+			setElementData(source, "blip", blip)
+			setElementVisibleTo (blip, root, false)
+			local players = getElementsByType("player")
+			for k, v in ipairs(players) do
+				if(getElementData(v, "nation") == getElementData(source, "nation")) then
+					if(v ~= source) then
+						setElementVisibleTo(blip, v, true)
+						setElementVisibleTo(getElementData(v, "blip"), source, true)
+					end
+				end
+			end
+		elseif(char.nation == 1) then
+			local blip = createBlipAttachedTo(source, 0, 2, 0, 255, 0, 255, 0, 500)
+			setElementData(source, "blip", blip)
+			setElementVisibleTo (blip, root, false)
+			local players = getElementsByType("player")
+			for k, v in ipairs(players) do
+					if(getElementData(v, "nation") == getElementData(source, "nation")) then
+						if(v ~= source) then
+							setElementVisibleTo(blip, v, true)
+							setElementVisibleTo(getElementData(v, "blip"), source, true)
+						end
+					end
+			end
+		end
+		--[[ tworzenie markerów na mapie - koniec]]--
+end
+addEvent("onPlayerSelectChar", true)
+addEventHandler("onPlayerSelectChar", getRootElement(), onPlayerSelectChar)

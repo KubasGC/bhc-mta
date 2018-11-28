@@ -1,0 +1,5 @@
+<meta>
+	<info author="Kubas" type="script" name="SAM" />
+	<script src="server.lua" type="server" />
+	<script src="client.lua" type="client" />
+</meta>

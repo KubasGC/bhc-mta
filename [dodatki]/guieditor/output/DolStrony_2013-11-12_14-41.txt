@@ -1,0 +1,11 @@
+
+addEventHandler("onClientResourceStart", resourceRoot,
+    function()    
+    end
+)
+
+addEventHandler("onClientRender", root,
+    function()
+        dxDrawText("BrotherHoodCombat.pl v0.1", 1126, 742, 1275, 768, tocolor(255, 253, 253, 255), 1.00, "default", "center", "top", false, false, false, false, false)
+    end
+)

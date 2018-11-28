@@ -1,0 +1,4 @@
+<meta>
+	<map src="Dobra.map" />
+	<script src="obiektyUsuwanie.lua" />
+</meta>

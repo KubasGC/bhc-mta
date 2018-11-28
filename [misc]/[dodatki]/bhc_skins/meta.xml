@@ -1,0 +1,11 @@
+<meta>
+
+	<file src="USA/skinUSA.txd" />
+	<file src="USA/skinUSA.dff" />
+
+	<file src="zsrr.txd" />
+	<file src="zsrr.dff" />
+
+	<script src="podmianka.lua" type="client" />
+
+</meta>

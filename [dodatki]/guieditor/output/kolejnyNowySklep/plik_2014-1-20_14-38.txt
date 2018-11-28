@@ -1,0 +1,32 @@
+--[[-------------------------------------------------
+Notes:
+
+> This code is using a custom font. This will only work as long as the location it is from always exists, and the resource it is part of is running.
+    To ensure it does not break, it is highly encouraged to move custom fonts into your local resource and reference them there.
+--]]-------------------------------------------------
+
+
+addEventHandler("onClientResourceStart", resourceRoot,
+    function()    
+    end
+)
+
+local dxfont_0 = dxCreateFont(":bhc_equip/font.ttf")
+local dxfont_1 = dxCreateFont(":bhc_equip/font.ttf")
+local dxfont_2 = dxCreateFont(":bhc_equip/font.ttf")
+
+addEventHandler("onClientRender", root,
+    function()
+        dxDrawImage(383, 81, 575, 526, ":bhc_equip/backShop.png", 0, 0, 0, tocolor(255, 255, 255, 255), false)
+        dxDrawRectangle(459, 202, 85, 20, tocolor(6, 23, 248, 80), false)
+        dxDrawRectangle(627, 202, 85, 20, tocolor(6, 23, 248, 80), false)
+        dxDrawRectangle(797, 202, 85, 20, tocolor(6, 23, 248, 80), false)
+        dxDrawText("Broń", 459, 200, 544, 222, tocolor(255, 255, 255, 255), 1.00, dxfont_0, "center", "center", false, false, false, false, false)
+        dxDrawText("Amunicja", 627, 200, 712, 222, tocolor(255, 255, 255, 255), 1.00, userdata: 000203A7, "center", "center", false, false, true, false, false)
+        dxDrawText("Wyposażenie", 797, 200, 882, 222, tocolor(255, 255, 255, 255), 1.00, userdata: 000203A7, "center", "center", false, false, false, false, false)
+        dxDrawText("AK-47", 496, 286, 792, 310, tocolor(255, 255, 255, 255), 1.00, dxfont_1, "left", "center", false, false, false, false, false)
+        dxDrawText("500", 792, 286, 876, 310, tocolor(255, 255, 255, 255), 1.00, dxfont_2, "center", "center", false, false, false, false, false)
+        dxDrawText("M4A1", 496, 310, 792, 334, tocolor(255, 255, 255, 255), 1.00, userdata: 00020416, "left", "center", false, false, false, false, false)
+        dxDrawText("501", 792, 310, 876, 334, tocolor(255, 255, 255, 255), 1.00, userdata: 00020446, "center", "center", false, false, false, false, false)
+    end
+)

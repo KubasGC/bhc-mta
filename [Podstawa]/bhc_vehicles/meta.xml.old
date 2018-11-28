@@ -1,0 +1,9 @@
+<meta>
+	<include resource="DB" />
+	<file src="font.ttf" />
+	<script src="emptyVehiclesDamage.lua" />
+	<script src="server.lua" type="server" />
+	<script src="newGUI.lua" type="client" />
+	<script src="pociski.lua" type="client" />
+	<script src="vDamage.lua" type="client" />
+</meta>

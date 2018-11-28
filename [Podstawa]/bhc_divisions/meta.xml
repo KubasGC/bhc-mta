@@ -1,0 +1,10 @@
+<meta>
+	<file src="font.ttf" />
+
+	<script src="server.lua" />
+	<script src="commands.lua" />
+	<script src="client.lua" type="client" />
+
+	<export function="getPlayerDivision" />
+	<export function="savePlayerDivision" />
+</meta>

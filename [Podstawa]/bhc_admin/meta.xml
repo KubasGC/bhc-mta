@@ -1,0 +1,15 @@
+<meta>
+
+	<file src="font.ttf" />
+
+    <script src="showAdmins.lua" type="client" />
+    <script src="server.lua" />
+    <script src="penalties.lua" type="client" />
+    <script src="createDX.lua" type="client" />'
+    <script src='commands.lua' />
+    <script src="stats.lua" type="client" />
+    
+    <export function="isAdmin" />
+    <export function="getAdminLevel" />
+    <min_mta_version client="1.3.4"></min_mta_version>
+</meta>

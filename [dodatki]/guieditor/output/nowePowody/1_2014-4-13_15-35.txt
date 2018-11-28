@@ -1,0 +1,14 @@
+
+addEventHandler("onClientResourceStart", resourceRoot,
+    function()    
+    end
+)
+
+addEventHandler("onClientRender", root,
+    function()
+        dxDrawText("Kick", 42, 248, 296, 276, tocolor(233, 0, 0, 254), 1.00, "default-bold", "left", "top", false, false, true, false, false)
+        dxDrawText("Gracz: Matthew Martinez", 42, 304, 296, 332, tocolor(255, 255, 255, 255), 1.00, "default-bold", "left", "center", false, false, true, false, false)
+        dxDrawText("Admin: Kubas", 42, 276, 296, 304, tocolor(255, 255, 255, 255), 1.00, "default-bold", "left", "center", false, false, true, false, false)
+        dxDrawText("Powód: Gunwo gunwo gunwo gunwo gunwo gunwo gunwo gunwo gunwo gunwo  gunwo gunwo gunwo  gunwo gunwo gunwo  gunwo gunwo gunwo  gunwo gunwo gunwo ", 42, 332, 296, 406, tocolor(255, 255, 255, 255), 1.00, "default-bold", "left", "top", true, true, true, false, false)
+    end
+)

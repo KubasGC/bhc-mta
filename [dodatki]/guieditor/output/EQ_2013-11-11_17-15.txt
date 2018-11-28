@@ -1,0 +1,23 @@
+
+GUIEditor = {
+    gridlist = {},
+    window = {},
+    button = {}
+}
+addEventHandler("onClientResourceStart", resourceRoot,
+    function()
+        GUIEditor.window[1] = guiCreateWindow(0.73, 0.39, 0.26, 0.55, "Ekwipunek", true)
+        guiWindowSetMovable(GUIEditor.window[1], false)
+        guiWindowSetSizable(GUIEditor.window[1], false)
+
+        GUIEditor.gridlist[1] = guiCreateGridList(0.04, 0.08, 0.93, 0.79, true, GUIEditor.window[1])
+        guiGridListAddColumn(GUIEditor.gridlist[1], "ID", 0.3)
+        guiGridListAddColumn(GUIEditor.gridlist[1], "Nazwa", 0.3)
+        guiGridListAddColumn(GUIEditor.gridlist[1], "Typ", 0.3)
+        guiGridListAddRow(GUIEditor.gridlist[1])
+        guiGridListSetItemText(GUIEditor.gridlist[1], 0, 1, "-", false, false)
+        guiGridListSetItemText(GUIEditor.gridlist[1], 0, 2, "-", false, false)
+        guiGridListSetItemText(GUIEditor.gridlist[1], 0, 3, "-", false, false)
+        GUIEditor.button[1] = guiCreateButton(0.04, 0.89, 0.24, 0.08, "Użyj", true, GUIEditor.window[1])    
+    end
+)

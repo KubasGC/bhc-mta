@@ -1,0 +1,30 @@
+--[[-------------------------------------------------
+Notes:
+
+> This code is using a custom font. This will only work as long as the location it is from always exists, and the resource it is part of is running.
+    To ensure it does not break, it is highly encouraged to move custom fonts into your local resource and reference them there.
+--]]-------------------------------------------------
+
+
+addEventHandler("onClientResourceStart", resourceRoot,
+    function()    
+    end
+)
+
+local dxfont_0 = dxCreateFont(":bhc_inventory/font.ttf")
+
+addEventHandler("onClientRender", root,
+    function()
+        dxDrawImage(924, 286, 437, 215, ":bhc_equip/itemsBack.png", 0, 0, 0, tocolor(255, 255, 255, 255), false)
+        dxDrawText("1. AK-47", 941, 342, 1168, 357, tocolor(255, 255, 255, 255), 1.00, dxfont_0, "left", "top", false, false, true, false, false)
+        dxDrawText("2. M4A1", 941, 357, 1168, 372, tocolor(255, 255, 255, 255), 1.00, userdata: 00020772, "left", "top", false, false, true, false, false)
+        dxDrawText("3. Spadochron", 941, 372, 1168, 387, tocolor(255, 255, 255, 255), 1.00, userdata: 00020772, "left", "top", false, false, true, false, false)
+        dxDrawText("4. Kamizelka kuloodporna", 941, 387, 1168, 402, tocolor(255, 255, 255, 255), 1.00, userdata: 00020772, "left", "top", false, false, true, false, false)
+        dxDrawText("5. M9 Beretta", 941, 402, 1168, 417, tocolor(255, 255, 255, 255), 1.00, userdata: 00020772, "left", "top", false, false, true, false, false)
+        dxDrawText("6. MP5", 941, 417, 1168, 432, tocolor(255, 255, 255, 255), 1.00, userdata: 00020772, "left", "top", false, false, true, false, false)
+        dxDrawText("V1 AK-47", 1192, 342, 1255, 357, tocolor(255, 255, 255, 255), 1.00, userdata: 00020772, "left", "top", false, false, true, false, false)
+        dxDrawText("V1 M4A1", 1192, 357, 1255, 372, tocolor(255, 255, 255, 255), 1.00, userdata: 00020772, "left", "top", false, false, true, false, false)
+        dxDrawText("V2 AK-47", 1276, 342, 1339, 357, tocolor(255, 255, 255, 255), 1.00, userdata: 00020772, "left", "top", false, false, true, false, false)
+        dxDrawText("V2 M4A1", 1276, 357, 1339, 372, tocolor(255, 255, 255, 255), 1.00, userdata: 00020772, "left", "top", false, false, true, false, false)
+    end
+)

@@ -1,0 +1,46 @@
+<meta>
+
+	<script src="shop_s.lua" />
+	<script src="equip_s.lua" />
+
+	<script src="shop.lua" type="client" />
+	<script src="equip.lua" type="client" />
+
+	<file src="font.ttf" />
+	<file src="click.mp3" />
+
+	<file src="images/bg.png" />
+	<file src="images/small.png" />
+	<file src="images/mid.png" />
+	<file src="images/large.png" />
+
+	<file src="images/weapons/ammo.png" />
+	<file src="images/weapons/heal.png" />
+
+	<file src="images/weapons/0.png" />
+	<file src="images/weapons/1.png" />
+	<file src="images/weapons/2.png" />
+	<file src="images/weapons/3.png" />
+	<file src="images/weapons/4.png" />
+	<file src="images/weapons/5.png" />
+	<file src="images/weapons/6.png" />
+	<file src="images/weapons/7.png" />
+	<file src="images/weapons/8.png" />
+	<file src="images/weapons/9.png" />
+	<file src="images/weapons/10.png" />
+	<file src="images/weapons/22.png" />
+	<file src="images/weapons/23.png" />
+	<file src="images/weapons/24.png" />
+	<file src="images/weapons/25.png" />
+	<file src="images/weapons/26.png" />
+	<file src="images/weapons/27.png" />
+	<file src="images/weapons/28.png" />
+	<file src="images/weapons/29.png" />
+	<file src="images/weapons/30.png" />
+	<file src="images/weapons/31.png" />
+	<file src="images/weapons/32.png" />
+	<file src="images/weapons/33.png" />
+	<file src="images/weapons/34.png" />
+	<file src="images/weapons/35.png" />
+	<file src="images/weapons/36.png" />
+</meta>

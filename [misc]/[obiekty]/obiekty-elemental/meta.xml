@@ -1,0 +1,15 @@
+<meta>
+	<file src="betbar.col" />
+	<file src="betbar.dff" />
+	<file src="betbar.txd" />
+
+	<file src="hesco.col" />
+	<file src="hesco.dff" />
+	<file src="hesco.txd" />
+
+	<file src="mina.col" />
+	<file src="mina.dff" />
+	<file src="mina.txd" />
+
+	<script src="podmianka.lua" type="client" />
+</meta>

@@ -1,0 +1,17 @@
+<meta>
+    <include resource="bhc_noti" />
+    <file src="zsrr.png" />
+    <file src="usa.png" />
+    <file src="font.ttf" />
+    <file src="back.png" />
+    <include resource="DB" />
+    <include resource="bhc_noti" />
+    <include resource="bhc_scores" />
+
+    <script src="nowyServer.lua" type="server" />
+	<script src="pociski.lua" type="server" />
+    <script src="client.lua" type="client" />
+
+    <export function="getPlayerArea" />
+    <export function="getPlayerSector" type="client" />
+</meta>

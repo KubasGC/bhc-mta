@@ -1,0 +1,6 @@
+<meta>
+	<file src="Star.txd" />
+	<file src="Star.dff" />
+	<file src="Star.col" />
+	<script src="podmianka.lua" type="client" />
+</meta>

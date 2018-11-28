@@ -1,0 +1,12 @@
+local dxfont_0 = dxCreateFont(":bhc_nametags/font.ttf")
+
+addEventHandler("onClientRender", root,
+    function()
+        dxDrawRectangle(361, 164, 570, 45, tocolor(0, 0, 0, 130), false)
+        dxDrawText("SAMOCHODY", 371, 178, 481, 194, tocolor(255, 255, 255, 255), 1.00, dxfont_0, "center", "top", false, false, true, false, false)
+        dxDrawText("PANCERNE", 481, 178, 591, 194, tocolor(255, 255, 255, 255), 1.00, dxfont_0, "center", "top", false, false, true, false, false)
+        dxDrawText("ŚMIGŁOWCE", 591, 178, 701, 194, tocolor(255, 255, 255, 255), 1.00, dxfont_0, "center", "top", false, false, true, false, false)
+        dxDrawText("SAMOLOTY", 701, 178, 811, 194, tocolor(255, 255, 255, 255), 1.00, dxfont_0, "center", "top", false, false, true, false, false)
+        dxDrawText("POZOSTAŁE", 811, 178, 921, 194, tocolor(255, 255, 255, 255), 1.00, dxfont_0, "center", "top", false, false, true, false, false)
+    end
+)

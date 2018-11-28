@@ -1,0 +1,12 @@
+<meta>
+	<file src="noti.png" />
+	<file src="font1.ttf" />
+	<file src="font2.ttf" />
+	<file src="bip.mp3" />
+	
+	<script src="client.lua" type="client" />
+	<script src="server.lua" />
+
+	<export function="showBox" type="server" />
+	<export function="showBox" type="client" />
+</meta>

@@ -1,0 +1,5 @@
+<meta>
+	<file src="font.ttf" />
+	<file src="tlo.png" />
+	<script src="client.lua" type="client" />
+</meta>

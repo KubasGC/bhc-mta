@@ -1,0 +1,70 @@
+    local deathSphere = createColSphere ( 810, -1334, 13, 100 ) --Triggers rockets
+     
+    function enableSam ( thePlayer )
+     
+         setElementPosition ( deathSphere, X, Y, Z )
+         setElementPosition ( warningSphere, X, Y, Z )  
+         outputChatBox ( "You have enabled the SAM sites at (put place here)", thePlayer, 255, 0, 0 )
+     
+    end
+     
+     
+     
+    function disableSam ( thePlayer )
+     
+         setElementPosition ( deathSphere, 0, 0, -9999 )
+         setElementPosition ( warningSphere, 0, 0, -9999 )
+         outputChatBox ( "You have disabled the SAM sites at(place here)", thePlayer, 255, 0, 0 )
+     
+    end
+     
+     
+     
+    function samSite ( thePlayer, matchingDimension )
+     
+              veh = getPlayerOccupiedVehicle ( thePlayer )    
+              id = getVehicleID ( veh )
+                   if ( id == 592 or id == 577 or id == 511 or id == 548 or id == 512 or id == 593 or id == 425 or id == 520 or id == 417 or id == 487 or id == 553 or id == 488 or id == 497 or id == 563 or id == 476 or id == 447 or id == 519 or id == 460 or id == 469 or id == 513 or id == 464 or id == 501 or id == 465 ) then
+                        triggerClientEvent ( thePlayer, "onSamTrigger", getRootElement() )
+                        outputChatBox ( "Surface to air missiles have been fired!", thePlayer, 255, 0, 0 )
+                   end
+         
+     
+    end
+     
+    function samWarn ( thePlayer, matchingDimension )
+     
+       veh = getPlayerOccupiedVehicle ( thePlayer )    
+       id = getVehicleID ( veh )
+            if ( id == 592 or id == 577 or id == 511 or id == 548 or id == 512 or id == 593 or id == 425 or id == 520 or id == 417 or id == 487 or id == 553 or id == 488 or id == 497 or id == 563 or id == 476 or id == 447 or id == 519 or id == 460 or id == 469 or id == 513 or id == 464 or id == 501 or id == 465 ) then  
+                 outputChatBox ( "Warning! (place here) has SAM sites activated! Turn back!", thePlayer, 255, 0, 0 )
+            end
+    end
+     
+    function jetpackTrigger ( thePlayer, matchingDimension )
+     
+         if ( doesPlayerHaveJetPack ( thePlayer ) ) then
+              outputChatBox ( "Warning! (place here) will kill you with telepathy if you go in with a jetpack!", thePlayer, 255, 0, 0 )
+         end
+     
+    end
+     
+     
+    function jetpackWarn ( thePlayer, matchingDimension )
+     
+         if ( doesPlayerHaveJetPack ( thePlayer ) ) then
+              triggerClientEvent ( thePlayer, "onSamTrigger", getRootElement() )
+              outputChatBox ( "I wasn't lying about the telepathy death. Enjoy the fireworks!", thePlayer, 255, 0, 0 )
+              killPed ( thePlayer )
+     
+     
+         end
+     
+    end
+     
+             
+     
+     
+    addCommandHandler ( "activatesam", enableSam )
+    addCommandHandler ( "deactivatesam", disableSam )
+    addEventHandler ( "onColShapeHit", deathSphere, samSite )

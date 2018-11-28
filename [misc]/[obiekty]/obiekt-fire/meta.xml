@@ -1,0 +1,11 @@
+<meta>
+
+	<file src="fire.dff" />
+	<file src="fire_bike.dff" />
+	<file src="fire_car.dff" />
+	<file src="fire_hat01.dff" />
+	<file src="fire_hat02.dff" />
+	<file src="fire_large.dff" />
+	<file src="fire_med.dff" />
+	<script src="podmianka.lua" type="client" />
+</meta>

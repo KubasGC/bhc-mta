@@ -1,0 +1,5 @@
+<meta>
+	<info author="zorrigas" name="glue2"  version="1.0" type="script"/>
+	<script src="cliente/main.lua" type="client" />
+	<script src="servidor/main.lua" type="server" />
+</meta>

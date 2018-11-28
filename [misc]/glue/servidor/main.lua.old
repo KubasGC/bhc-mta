@@ -1,0 +1,26 @@
+	
+function gluePlayer(slot, vehicle, x, y, z, rotX, rotY, rotZ)
+	attachElementToElement(source, vehicle, x, y, z, rotX, rotY, rotZ)
+	setPlayerWeaponSlot(source, slot)
+end
+addEvent("gluePlayer",true)
+addEventHandler("gluePlayer",getRootElement(),gluePlayer)
+
+function ungluePlayer()
+	detachElementFromElement(source)
+end
+addEvent("ungluePlayer",true)
+addEventHandler("ungluePlayer",getRootElement(),ungluePlayer)
+
+-- Vehicle
+function glueVehicle(attachedTo, x, y, z, rotX, rotY, rotZ)
+	attachElementToElement(source, attachedTo, x, y, z, rotX, rotY, rotZ)
+	outputDebugString("function glueVehicle")
+end
+addEvent("glueVehicle",true)
+addEventHandler("glueVehicle",getRootElement(),glueVehicle)
+function unglueVehicle()
+	detachElementFromElement(source)
+end
+addEvent("unglueVehicle",true)
+addEventHandler("unglueVehicle",getRootElement(),unglueVehicle)

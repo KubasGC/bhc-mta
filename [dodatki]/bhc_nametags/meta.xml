@@ -1,0 +1,33 @@
+<meta>
+	<file src="font.ttf" type="client" />
+	<script src="nametags.lua" type="client" />
+	<script src="renderOpis.lua" type="client" />
+
+	<file src="images/USA/1.png" />
+	<file src="images/USA/2.png" />
+	<file src="images/USA/3.png" />
+	<file src="images/USA/4.png" />
+	<file src="images/USA/5.png" />
+	<file src="images/USA/6.png" />
+	<file src="images/USA/7.png" />
+	<file src="images/USA/8.png" />
+	<file src="images/USA/9.png" />
+	<file src="images/USA/10.png" />
+	<file src="images/USA/11.png" />
+	<file src="images/USA/12.png" />
+	<file src="images/USA/13.png" />
+
+	<file src="images/ZSRR/1.png" />
+	<file src="images/ZSRR/2.png" />
+	<file src="images/ZSRR/3.png" />
+	<file src="images/ZSRR/4.png" />
+	<file src="images/ZSRR/5.png" />
+	<file src="images/ZSRR/6.png" />
+	<file src="images/ZSRR/7.png" />
+	<file src="images/ZSRR/8.png" />
+	<file src="images/ZSRR/9.png" />
+	<file src="images/ZSRR/10.png" />
+	<file src="images/ZSRR/11.png" />
+	<file src="images/ZSRR/12.png" />
+	<file src="images/ZSRR/13.png" />
+</meta>

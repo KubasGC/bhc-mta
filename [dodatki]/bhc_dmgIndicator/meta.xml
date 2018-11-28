@@ -1,0 +1,6 @@
+<meta>
+    <info author="RiginOAL" name="damagesource" type="script" destciption="Damage source" version="1.0.0" />
+    
+    <script src="damage_c.lua" type="client" />
+    <file src="arrow.png" type="client" />
+</meta>

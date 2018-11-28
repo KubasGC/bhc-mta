@@ -1,0 +1,32 @@
+
+addEventHandler("onClientResourceStart", resourceRoot,
+	function()    
+	end
+)
+
+addEventHandler("onClientRender", root,
+	function()
+		dxDrawRectangle(418, 123, 553, 515, tocolor(0, 0, 0, 255), false)
+		dxDrawRectangle(313, 123, 105, 36, tocolor(110, 197, 57, 255), true)
+		dxDrawRectangle(313, 159, 105, 36, tocolor(110, 197, 57, 255), true)
+		dxDrawLine(313, 159, 416, 159, tocolor(255, 255, 255, 255), 1, true)
+		dxDrawRectangle(313, 195, 105, 36, tocolor(110, 197, 57, 255), true)
+		dxDrawLine(313, 195, 416, 195, tocolor(255, 255, 255, 255), 1, true)
+		dxDrawText("SKLEP", 418, 94, 541, 123, tocolor(255, 255, 255, 255), 1.00, "bankgothic", "left", "top", false, false, true, false, false)
+		dxDrawText("Broń", 314, 123, 418, 158, tocolor(255, 255, 255, 255), 1.00, "default", "center", "center", false, false, true, false, false)
+		dxDrawText("Amunicja", 314, 159, 418, 194, tocolor(255, 255, 255, 255), 1.00, "default", "center", "center", false, false, true, false, false)
+		dxDrawText("Wyposażenie", 314, 196, 418, 231, tocolor(255, 255, 255, 255), 1.00, "default", "center", "center", false, false, true, false, false)
+		dxDrawRectangle(866, 638, 105, 36, tocolor(110, 197, 57, 255), true)
+		dxDrawRectangle(866, 87, 105, 36, tocolor(110, 197, 57, 255), true)
+		dxDrawText("Zamknij", 867, 88, 971, 123, tocolor(255, 255, 255, 255), 1.00, "default", "center", "center", false, false, true, false, false)
+		dxDrawText("Zakup", 866, 639, 970, 674, tocolor(255, 255, 255, 255), 1.00, "default", "center", "center", false, false, true, false, false)
+		dxDrawRectangle(458, 271, 477, 328, tocolor(73, 56, 242, 150), false)
+		dxDrawText("Witamy w sklepie!\n\nAby coś kupić wybierz odpowiednią kategorię po lewej stronie, zaznacz produkt i kup!", 458, 162, 935, 249, tocolor(255, 255, 255, 255), 1.00, "default", "center", "center", false, false, true, false, false)
+		dxDrawText("NAZWA", 486, 249, 717, 271, tocolor(255, 255, 255, 255), 1.00, "default-bold", "left", "center", false, false, true, false, false)
+		dxDrawText("CENA", 769, 249, 895, 271, tocolor(255, 255, 255, 255), 1.00, "default-bold", "left", "center", false, false, true, false, false)
+		dxDrawText("M4A1", 486, 298, 717, 320, tocolor(255, 255, 255, 255), 1.00, "default-bold", "left", "center", false, false, true, false, false)
+		dxDrawText("50 punktów", 769, 298, 895, 320, tocolor(255, 255, 255, 255), 1.00, "default-bold", "left", "center", false, false, true, false, false)
+		dxDrawText("AK-47", 486, 320, 717, 342, tocolor(255, 255, 255, 255), 1.00, "default-bold", "left", "center", false, false, true, false, false)
+		dxDrawText("40 punktów", 769, 320, 895, 342, tocolor(255, 255, 255, 255), 1.00, "default-bold", "left", "center", false, false, true, false, false)
+	end
+)

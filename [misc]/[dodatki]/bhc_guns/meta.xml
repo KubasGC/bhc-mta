@@ -1,0 +1,27 @@
+<meta>
+	<file src="AK-47/ak47.dff" />
+	<file src="AK-47/ak47.txd" />
+
+	<file src="colt9mm/colt.dff" />
+	<file src="colt9mm/colt.txd" />
+
+	<file src="countryRifle/country.dff" />
+	<file src="countryRifle/country.txd" />
+
+	<file src="desertEagle/desert.dff" />
+	<file src="desertEagle/desert.txd" />
+
+	<file src="m4/m4.dff" />
+	<file src="m4/m4.txd" />
+
+	<file src="MP5/mp5.dff" />
+	<file src="MP5/mp5.txd" />
+
+	<file src="Shotgun/shotgun.dff" />
+	<file src="Shotgun/shotgun.txd" />
+
+	<file src="sniperRifle/sniper.dff" />
+	<file src="sniperRifle/sniper.txd" />
+
+	<script src="podmianka.lua" type="client" />
+</meta>

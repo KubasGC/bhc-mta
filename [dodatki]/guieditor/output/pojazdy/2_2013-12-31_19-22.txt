@@ -1,0 +1,35 @@
+--[[-------------------------------------------------
+Notes:
+
+> This code is using a custom font. This will only work as long as the location it is from always exists, and the resource it is part of is running.
+    To ensure it does not break, it is highly encouraged to move custom fonts into your local resource and reference them there.
+--]]-------------------------------------------------
+
+
+addEventHandler("onClientResourceStart", resourceRoot,
+    function()    
+    end
+)
+
+local dxfont_0 = dxCreateFont(":bhc_nametags/font.ttf")
+
+addEventHandler("onClientRender", root,
+    function()
+        dxDrawRectangle(361, 164, 570, 45, tocolor(0, 0, 0, 130), false)
+        dxDrawText("SAMOCHODY", 371, 178, 481, 194, tocolor(255, 255, 255, 255), 1.00, dxfont_0, "center", "top", false, false, true, false, false)
+        dxDrawText("PANCERNE", 481, 178, 591, 194, tocolor(255, 255, 255, 255), 1.00, dxfont_0, "center", "top", false, false, true, false, false)
+        dxDrawText("ŚMIGŁOWCE", 591, 178, 701, 194, tocolor(255, 255, 255, 255), 1.00, dxfont_0, "center", "top", false, false, true, false, false)
+        dxDrawText("SAMOLOTY", 701, 178, 811, 194, tocolor(255, 255, 255, 255), 1.00, dxfont_0, "center", "top", false, false, true, false, false)
+        dxDrawText("POZOSTAŁE", 811, 178, 921, 194, tocolor(255, 255, 255, 255), 1.00, dxfont_0, "center", "top", false, false, true, false, false)
+        dxDrawRectangle(361, 209, 570, 198, tocolor(0, 0, 0, 180), false)
+        dxDrawRectangle(371, 219, 550, 178, tocolor(0, 0, 0, 180), false)
+        dxDrawText("NAZWA POJAZDU", 396, 229, 817, 243, tocolor(255, 255, 255, 255), 1.00, dxfont_1, "center", "center", false, false, true, false, false)
+        dxDrawText("CENA", 817, 229, 911, 243, tocolor(255, 255, 255, 255), 1.00, dxfont_0, "center", "center", false, false, true, false, false)
+        dxDrawText("Pojazd 1", 396, 253, 817, 272, tocolor(255, 255, 255, 255), 1.00, dxfont_0, "center", "center", false, false, true, false, false)
+        dxDrawText("Pojazd 2", 396, 272, 817, 291, tocolor(255, 255, 255, 255), 1.00, dxfont_0, "center", "center", false, false, true, false, false)
+        dxDrawText("Pojazd 3", 396, 291, 817, 310, tocolor(255, 255, 255, 255), 1.00, dxfont_0, "center", "center", false, false, true, false, false)
+        dxDrawText("$250000", 817, 253, 911, 272, tocolor(255, 255, 255, 255), 1.00, dxfont_0, "center", "center", false, false, true, false, false)
+        dxDrawText("$250000", 817, 272, 911, 291, tocolor(255, 255, 255, 255), 1.00, dxfont_0, "center", "center", false, false, true, false, false)
+        dxDrawText("$250000", 817, 291, 911, 310, tocolor(255, 255, 255, 255), 1.00, dxfont_0, "center", "center", false, false, true, false, false)
+    end
+)

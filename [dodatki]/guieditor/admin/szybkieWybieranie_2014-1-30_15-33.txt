@@ -1,0 +1,19 @@
+--[[-------------------------------------------------
+Notes:
+
+> This code is using a custom font. This will only work as long as the location it is from always exists, and the resource it is part of is running.
+    To ensure it does not break, it is highly encouraged to move custom fonts into your local resource and reference them there.
+--]]-------------------------------------------------
+
+
+
+local dxfont_0 = dxCreateFont(":bhc_login/font.ttf")
+
+addEventHandler("onClientRender", root,
+    function()
+        dxDrawRectangle(465, 213, 111, 45, tocolor(16, 21, 238, 150), false)
+        dxDrawText("Wyrzuć z serwera", 465, 213, 576, 258, tocolor(255, 255, 255, 255), 1.00, dxfont_0, "center", "center", false, false, false, false, false)
+        dxDrawRectangle(839, 213, 111, 45, tocolor(16, 21, 238, 150), false)
+        dxDrawText("Zablokuj postać", 839, 213, 950, 258, tocolor(255, 255, 255, 255), 1.00, userdata: 000201F5, "center", "center", false, false, false, false, false)
+    end
+)

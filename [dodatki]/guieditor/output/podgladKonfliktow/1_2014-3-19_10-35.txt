@@ -1,0 +1,23 @@
+
+addEventHandler("onClientResourceStart", resourceRoot,
+    function()    
+    end
+)
+
+addEventHandler("onClientRender", root,
+    function()
+        dxDrawRectangle(32, 420, 354, 97, tocolor(0, 0, 0, 150), false)
+        dxDrawText("AKTUALNE KONFLIKTY", 32, 410, 166, 425, tocolor(255, 255, 255, 255), 1.00, "default-bold", "left", "top", false, false, false, false, false)
+        dxDrawRectangle(382, 443, 127, 0, tocolor(255, 255, 255, 255), false)
+        dxDrawRectangle(32, 425, 354, 23, tocolor(0, 0, 0, 150), false)
+        dxDrawText("Sektor", 32, 425, 172, 448, tocolor(255, 255, 255, 255), 1.00, "default", "center", "center", false, false, false, false, false)
+        dxDrawText("Punkty USA", 299, 425, 372, 448, tocolor(255, 255, 255, 255), 1.00, "default", "center", "center", false, false, false, false, false)
+        dxDrawText("Punkty ZSRR", 226, 425, 299, 448, tocolor(255, 255, 255, 255), 1.00, "default", "center", "center", false, false, false, false, false)
+        dxDrawText("C5", 32, 448, 172, 471, tocolor(255, 255, 255, 255), 1.00, "default-bold", "center", "center", false, false, false, false, false)
+        dxDrawText("A6", 32, 471, 172, 494, tocolor(255, 255, 255, 255), 1.00, "default-bold", "center", "center", false, false, false, false, false)
+        dxDrawText("1 ZSRR", 226, 448, 299, 471, tocolor(133, 0, 0, 255), 1.00, "default-bold", "center", "center", false, false, false, false, false)
+        dxDrawText("2 ZSRR", 226, 471, 299, 494, tocolor(133, 0, 0, 255), 1.00, "default-bold", "center", "center", false, false, false, false, false)
+        dxDrawText("1 USA", 299, 448, 372, 471, tocolor(22, 84, 3, 255), 1.00, "default-bold", "center", "center", false, false, false, false, false)
+        dxDrawText("2 USA", 299, 471, 372, 494, tocolor(22, 84, 3, 255), 1.00, "default-bold", "center", "center", false, false, false, false, false)
+    end
+)

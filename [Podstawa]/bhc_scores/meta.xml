@@ -1,0 +1,4 @@
+<meta>
+	<file src="font.ttf" />
+	<script src="newScores.lua" type="client" />
+</meta>

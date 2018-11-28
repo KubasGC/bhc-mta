@@ -1,0 +1,27 @@
+--[[-------------------------------------------------
+Notes:
+
+> This code is using a custom font. This will only work as long as the location it is from always exists, and the resource it is part of is running.
+    To ensure it does not break, it is highly encouraged to move custom fonts into your local resource and reference them there.
+--]]-------------------------------------------------
+
+
+addEventHandler("onClientResourceStart", resourceRoot,
+    function()    
+    end
+)
+
+local dxfont_0 = dxCreateFont(":bhc_hud/font.ttf")
+local dxfont_1 = dxCreateFont(":bhc_hud/font.ttf")
+
+addEventHandler("onClientRender", root,
+    function()
+        dxDrawImage(1203, 83, 25, 26, ":bhc_hud/images/healthicon.png", 0, 0, 0, tocolor(45, 169, 7, 255), false)
+        dxDrawText("100", 1228, 83, 1314, 109, tocolor(45, 169, 7, 255), 1.00, dxfont_0, "center", "center", false, false, false, false, false)
+        dxDrawText("100", 1228, 57, 1314, 83, tocolor(126, 133, 146, 255), 1.00, userdata: 0002021A, "center", "center", false, false, false, false, false)
+        dxDrawImage(1203, 57, 25, 26, ":bhc_hud/images/armoricon.png", 0, 0, 0, tocolor(126, 133, 146, 255), true)
+        dxDrawText("Siergiej Bogdanow", 1166, 10, 1356, 29, tocolor(255, 255, 255, 255), 1.00, dxfont_1, "center", "center", false, false, false, false, false)
+        dxDrawText("Shotgun", 991, 57, 1181, 76, tocolor(255, 255, 255, 255), 1.00, userdata: 00020273, "center", "center", false, false, false, false, false)
+        dxDrawText("30/50", 991, 76, 1181, 95, tocolor(255, 255, 255, 255), 1.00, userdata: 00020273, "center", "center", false, false, false, false, false)
+    end
+)

@@ -1,0 +1,9 @@
+<meta>
+	<include resource="bhc_noti" />
+	<file src="font.ttf" />
+	<file src="fire.mp3" />
+
+	<script src="client.lua" type="client" />
+	<script src="server.lua" />
+	<script src="namierzanie.lua" type="client" />
+</meta>

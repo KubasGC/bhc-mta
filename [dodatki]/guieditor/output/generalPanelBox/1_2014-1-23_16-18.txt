@@ -1,0 +1,58 @@
+--[[-------------------------------------------------
+Notes:
+
+> This code is using a custom font. This will only work as long as the location it is from always exists, and the resource it is part of is running.
+    To ensure it does not break, it is highly encouraged to move custom fonts into your local resource and reference them there.
+--]]-------------------------------------------------
+
+
+GUIEditor = {
+    edit = {}
+}
+addEventHandler("onClientResourceStart", resourceRoot,
+    function()
+        GUIEditor.edit[1] = guiCreateEdit(0.12, 0.44, 0.14, 0.06, "PIECHOTA", true)
+
+
+        GUIEditor.edit[2] = guiCreateEdit(0.12, 0.79, 0.14, 0.06, "PANCERNA", true)
+
+
+        GUIEditor.edit[3] = guiCreateEdit(0.38, 0.79, 0.14, 0.06, "TRANSPORTOWA", true)
+
+
+        GUIEditor.edit[4] = guiCreateEdit(0.38, 0.44, 0.14, 0.06, "LOTNICZA", true)    
+    end
+)
+
+local dxfont_0 = dxCreateFont(":bhc_equip/font.ttf")
+
+addEventHandler("onClientRender", root,
+    function()
+        dxDrawImage(0, 0, 1366, 768, ":bhc_divisions/images/generalbox.png", 0, 0, 0, tocolor(255, 255, 255, 255), false)
+        dxDrawRectangle(354, 495, 63, 45, tocolor(8, 48, 246, 150), false)
+        dxDrawRectangle(354, 241, 63, 45, tocolor(8, 48, 246, 150), false)
+        dxDrawText("#ff0000 ZSRR", 1067, 66, 1130, 86, tocolor(255, 255, 255, 255), 1.00, dxfont_0, "left", "top", false, false, false, true, false)
+        dxDrawText("#00ff00 $5000000", 1067, 96, 1130, 116, tocolor(255, 255, 255, 255), 1.00, userdata: 00020299, "left", "top", false, false, false, true, false)
+        dxDrawText("#00ff00 $5000000", 1067, 126, 1130, 146, tocolor(255, 255, 255, 255), 1.00, userdata: 00020299, "left", "top", false, false, false, true, false)
+        dxDrawText("BUDŻET", 91, 335, 156, 380, tocolor(255, 255, 255, 255), 1.00, userdata: 00020299, "center", "center", false, false, false, true, false)
+        dxDrawText("BUDŻET", 91, 604, 156, 649, tocolor(255, 255, 255, 255), 1.00, userdata: 00020299, "center", "center", false, false, false, true, false)
+        dxDrawText("BUDŻET", 446, 335, 511, 380, tocolor(255, 255, 255, 255), 1.00, userdata: 00020299, "center", "center", false, false, false, true, false)
+        dxDrawText("BUDŻET", 446, 604, 511, 649, tocolor(255, 255, 255, 255), 1.00, userdata: 00020299, "center", "center", false, false, false, true, false)
+        dxDrawText("GENERAŁ", 91, 241, 156, 286, tocolor(255, 255, 255, 255), 1.00, userdata: 00020299, "center", "center", false, false, false, true, false)
+        dxDrawText("GENERAŁ", 91, 495, 156, 540, tocolor(255, 255, 255, 255), 1.00, userdata: 00020299, "center", "center", false, false, false, true, false)
+        dxDrawText("GENERAŁ", 446, 495, 511, 540, tocolor(255, 255, 255, 255), 1.00, userdata: 00020299, "center", "center", false, false, false, true, false)
+        dxDrawText("GENERAŁ", 446, 240, 511, 285, tocolor(255, 255, 255, 255), 1.00, userdata: 00020299, "center", "center", false, false, false, true, false)
+        dxDrawText("Jeremy Simons lotnicza", 511, 240, 709, 285, tocolor(255, 255, 255, 255), 1.00, userdata: 00020299, "center", "center", false, false, false, true, false)
+        dxDrawText("Jeremy Simons Transportowa", 511, 495, 709, 540, tocolor(255, 255, 255, 255), 1.00, userdata: 00020299, "center", "center", false, false, false, true, false)
+        dxDrawText("Jeremy Simons pancerna", 156, 495, 354, 540, tocolor(255, 255, 255, 255), 1.00, userdata: 00020299, "center", "center", false, false, false, true, false)
+        dxDrawText("Jeremy Simons piechota", 156, 241, 354, 286, tocolor(255, 255, 255, 255), 1.00, userdata: 00020299, "center", "center", false, false, false, true, false)
+        dxDrawText("ZMIEŃ\npiechota", 354, 241, 417, 286, tocolor(255, 255, 255, 255), 1.00, userdata: 00020299, "center", "center", false, false, false, true, false)
+        dxDrawText("ZMIEŃ\npancerna", 354, 495, 417, 540, tocolor(255, 255, 255, 255), 1.00, userdata: 00020299, "center", "center", false, false, false, true, false)
+        dxDrawRectangle(709, 240, 63, 45, tocolor(8, 48, 246, 150), false)
+        dxDrawRectangle(709, 495, 63, 45, tocolor(8, 48, 246, 150), false)
+        dxDrawText("ZMIEŃ\ntransportowa", 709, 495, 772, 540, tocolor(255, 255, 255, 255), 1.00, userdata: 00020299, "center", "center", false, false, false, true, false)
+        dxDrawText("ZMIEŃ\nlotnicza", 709, 240, 772, 285, tocolor(255, 255, 255, 255), 1.00, userdata: 00020299, "center", "center", false, false, false, true, false)
+        dxDrawRectangle(1106, 564, 173, 50, tocolor(8, 48, 246, 150), false)
+        dxDrawText("ZAPISZ", 1106, 564, 1279, 614, tocolor(255, 255, 255, 255), 1.00, userdata: 00020299, "center", "center", false, false, false, true, false)
+    end
+)

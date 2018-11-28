@@ -1,0 +1,26 @@
+
+addEventHandler("onClientResourceStart", resourceRoot,
+    function()    
+    end
+)
+
+addEventHandler("onClientRender", root,
+    function()
+        dxDrawImage(408, 94, 557, 519, ":bhc_equip/images/bg.png", 0, 0, 0, tocolor(255, 255, 255, 255), false)
+        dxDrawImage(436, 309, 125, 70, ":bhc_equip/images/mid.png", 0, 0, 0, tocolor(255, 255, 255, 255), false)
+        dxDrawImage(561, 309, 125, 70, ":bhc_equip/images/mid.png", 0, 0, 0, tocolor(255, 255, 255, 255), false)
+        dxDrawImage(686, 309, 125, 70, ":bhc_equip/images/mid.png", 0, 0, 0, tocolor(255, 255, 255, 255), false)
+        dxDrawImage(811, 379, 125, 70, ":bhc_equip/images/mid.png", 0, 0, 0, tocolor(255, 255, 255, 255), false)
+        dxDrawImage(436, 379, 125, 70, ":bhc_equip/images/mid.png", 0, 0, 0, tocolor(255, 255, 255, 255), false)
+        dxDrawImage(561, 379, 125, 70, ":bhc_equip/images/mid.png", 0, 0, 0, tocolor(255, 255, 255, 255), false)
+        dxDrawImage(686, 379, 125, 70, ":bhc_equip/images/mid.png", 0, 0, 0, tocolor(255, 255, 255, 255), false)
+        dxDrawImage(811, 309, 125, 70, ":bhc_equip/images/mid.png", 0, 0, 0, tocolor(255, 255, 255, 255), false)
+        dxDrawImage(436, 449, 125, 70, ":bhc_equip/images/mid.png", 0, 0, 0, tocolor(255, 255, 255, 255), false)
+        dxDrawImage(561, 449, 125, 70, ":bhc_equip/images/mid.png", 0, 0, 0, tocolor(255, 255, 255, 255), false)
+        dxDrawImage(686, 449, 125, 70, ":bhc_equip/images/mid.png", 0, 0, 0, tocolor(255, 255, 255, 255), false)
+        dxDrawImage(811, 449, 125, 70, ":bhc_equip/images/mid.png", 0, 0, 0, tocolor(255, 255, 255, 255), false)
+        dxDrawImage(451, 176, 125, 70, ":bhc_equip/images/mid.png", 0, 0, 0, tocolor(255, 255, 255, 255), false)
+        dxDrawImage(623, 176, 125, 70, ":bhc_equip/images/mid.png", 0, 0, 0, tocolor(255, 255, 255, 255), false)
+        dxDrawImage(795, 176, 125, 70, ":bhc_equip/images/mid.png", 0, 0, 0, tocolor(255, 255, 255, 255), false)
+    end
+)

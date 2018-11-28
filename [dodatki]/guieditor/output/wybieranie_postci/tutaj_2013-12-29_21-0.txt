@@ -1,0 +1,17 @@
+--[[-------------------------------------------------
+Notes:
+
+> This code is using a custom font. This will only work as long as the location it is from always exists, and the resource it is part of is running.
+    To ensure it does not break, it is highly encouraged to move custom fonts into your local resource and reference them there.
+--]]-------------------------------------------------
+
+
+
+local dxfont_0 = dxCreateFont(":bhc_nametags/font.ttf")
+
+addEventHandler("onClientRender", root,
+    function()
+        dxDrawRectangle(290, 176, 757, 438, tocolor(0, 0, 0, 150), false)
+        dxDrawText("Jeremy Simons\nNacja: USA", 334, 200, 419, 233, tocolor(255, 255, 255, 255), 1.00, dxfont_0, "center", "top", false, false, false, false, false)
+    end
+)
